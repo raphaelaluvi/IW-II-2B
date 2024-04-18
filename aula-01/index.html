@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <title>Validação JQuery</title>
+
+    <script type="text/javascript">
+        $document.ready{function(){
+            $('#formCadastro').validate({
+                rules:{
+                    nome: {
+                        maxlength: 100,
+                    }
+                }
+            })
+        }}
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Validação do formulário com JQuery Validation</h1>
+    <form name="formCadastro" id="formCadastro" method="post">
+        <div class="row">
+            <label>Nome</label>
+            <input type="text" name="nome" id="nome" class="form-control" />
+        </div>
+        <div class="row">
+            <label>CPF</label>
+            <input type="text" name="cpf" id="cpf" class="form-control" />
+        </div>	
+        <div class="row">
+            <label>E-mail</label>
+            <input type="email" name="email" id="email" class="form-control" />
+        </div>	
+        <div class="row">
+            <label>Celular</label>
+            <input type="text" name="celular" id="celular" class="form-control" />
+        </div>			
+        <div class="row">
+            <label>Cidade</label>
+            <select name="cidade" id="cidade" class="form-control">
+                <option value="">----</option>
+                <option value="MAUA">Mauá</option>
+                <option value="RIBEIRAOPIRES">Ribeirão Pires</option>
+                <option value="RIOGRANDE">Rio Grande da Serra</option>
+            </select>
+        </div>
+        <div class="row">
+            <label>CEP</label>
+            <input type="text" name="cep" id="cep" class="form-control" />
+        </div>	
+        <div class="row">
+            <label>Idade</label>
+            <input type="number" name="idade" id="idade" class="form-control" />
+        </div>
+        <div class="row">
+            <label>Instagram</label>
+            <input type="text" name="instagram" id="instagram" class="form-control" />
+        </div>
+        <div class="row">
+            <input type="submit" name="enviar" id="enviar" class="btn btn-primary form-control" />
+        </div>
+    </form>
+    </div>
+    
+</body>
+</html>
