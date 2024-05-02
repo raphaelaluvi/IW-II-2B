@@ -2,7 +2,7 @@
 $(document).ready(function(){
     //aponta os elementos e armazena na variavel
     const mario = $('.mario')
-    const pipe = $('pipe')
+    const pipe = $('.pipe')
 
     //funcao do pulo
     const pulo = () => {
@@ -28,13 +28,16 @@ $(document).ready(function(){
             pipe.css('animation', 'none')
             pipe.css('left', `${pipePosition}px`) 
     
+            //mario vai parar de andar tbm na posicao q ele encosta no pipe
             mario.css('animation', 'none')
             mario.css('bottom', `${marioPosition}px`)
     
-            mario.atrr('src', 'img/game-over.png') 
+            //o mario vai mudar
+            mario.attr('src', 'img/game-over.png') 
             mario.css('width', '75px')
-            mario.css('left', '50px')
+            mario.css('marginLeft', '50px')
     
+            //para o loop
             clearInterval(loop)
         }
     }
