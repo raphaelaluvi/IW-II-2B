@@ -13,7 +13,6 @@ const pulo = () => {
 
 const loop =  setInterval (() => {
 
-
     const pipePosition = pipe.offsetLeft
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '')
 
