@@ -5,21 +5,21 @@ const app = express()
 
 // '/' rota principal, cria funcao de call back
 app.get('/',function(req, res){
-    res.send('SEJA BEM-VINDO!! AULAS COM A CHICA MOEDAS')
+    res.sendFile(__dirname + '/paginas/index.html')
 })
 
 //criou outras rotas
 app.get('/blog',function(req, res){
-    res.send('PÁGINA BLOG RAPHINHA E DJOLIZ')
+    res.send('PÁGINA BLOG RAPHINHA')
 })
 
 app.get('/sobre',function(req, res){
-    res.send('PÁGINA SOBRE RAPHINHA E DJOLIZ')
+    res.sendFile(__dirname + '/paginas/sobre.html')
 })
 
 //rotas dinamicas, recebem parametros 
-app.get('/cadastro/:nome/:curso',function(req, res){
-    res.send('CADASTRO CONTATOS DA CHICA MOEDAS: ' + req.params.nome + '\nO CURSO DO SER: ' + req.params.curso)//pegando o valor do campo nome
+app.get('/cadastro/:nome/:cargo',function(req, res){
+    res.send('Nome: ' + req.params.nome + '\nO cargo: ' + req.params.cargo)//pegando o valor do campo nome
 })
 
 //cria o servidor e vai ficar de olho na porta
