@@ -1,5 +1,5 @@
 const express = require('express')
-//instanciar uma variavel teste**
+//instanciar uma variavel 
 //const pq n pode mudar dps
 const app = express()
 const handlebars = require('express-handlebars')
